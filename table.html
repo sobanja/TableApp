@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./stylesTable.css">
+  <title>Table Application</title>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Table Application</h1>
+
+    <label for="data-set">Select a data set:</label>
+    <select id="data-set">
+      <option value="small">Small Data Set</option>
+      <option value="large">Large Data Set</option>
+    </select>
+
+    <button id="addBtn">Add</button>
+
+    <br><br>
+
+    <div id="formContainer">
+      <form id="addForm">
+        <table>
+          <tr>
+            <th>ID:</th>
+            <th>FirstName:</th>
+            <th>LastName:</th>
+            <th>E-mail:</th>
+            <th>Phone:</th>
+          </tr>
+          <tr>
+            <td><input type="text" id="id-input" placeholder="id"></td>
+            <td><input type="text" id="firstName-input" placeholder="firstName"></td>
+            <td><input type="text" id="lastName-input" placeholder="lastName"></td>
+            <td><input type="text" id="email-input" placeholder="email"></td>
+            <td><input type="text" id="phone-input" placeholder="phone"></td>
+            <td><button id="add-button" disabled>Add to table</button></td>
+          </tr>
+        </table>
+      </form>
+    </div>
+
+    <div id="filter">
+      <input type="text" id="filter-input" placeholder="Filter...">
+      <button id="filter-button">Find</button>
+    </div>
+
+    <div id="table-container">
+    </div>
+
+    <div id="pagination">
+    </div>
+
+    <div id="selected-row">
+    </div>
+  </div>
+
+  <script src="./table.js"></script>
+</body>
+</html>
