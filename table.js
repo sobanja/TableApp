@@ -83,7 +83,6 @@ const loadData = (url) => {
 
 // функ создает и заполняет таблицу на основе переданных данных
 const buildTable = (data) => {
-  console.log(data);
   //получаем таблицу
   const tableContainer = document.getElementById("table-container");
   // очищаем содержимое
@@ -102,6 +101,7 @@ const buildTable = (data) => {
     const th = document.createElement("th");
     const arrow = document.createElement("span");
     arrow.classList.add("arrow");
+
 
     // если ключ соотв текущ ключу сортировки, то добавл символ такой-то
     if (key === sortKey) {
@@ -122,15 +122,17 @@ const buildTable = (data) => {
   });
   // заполнение данных в таблице
   // итерация по строкам (иденксам) от start - end
-  for (let i = startIndex; i < endIndex; i++) {
-    // для каждой строки данных созд элем строки tr и доб в таблицу
-    const rowData = data[i];
+  for (let i = startIndex; i < data.length; i++) {
+
+    // для каждой строки данных созд элем cстроки tr и доб в таблицу
+    const rowData = data[i]; console.log(rowData); 
     const row = document.createElement("tr");
     row.classList.add("data");
     table.appendChild(row);
 
     // для каждого знач в строке данных созд ячейка td
     Object.values(rowData).forEach((value) => {
+      console.log(value);
       const cell = document.createElement("td");
       // если знач явл объектом, то знач объекта объед в строку (для адреса)
       if (typeof value === "object") {
