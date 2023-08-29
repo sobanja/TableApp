@@ -16,7 +16,7 @@
       <option value="small">Small Data Set</option>
       <option value="large">Large Data Set</option>
     </select>
-
+ 
     <button id="addBtn">Add</button>
 
     <br><br>
@@ -37,7 +37,7 @@
             <td><input type="text" id="lastName-input" placeholder="lastName"></td>
             <td><input type="text" id="email-input" placeholder="email"></td>
             <td><input type="text" id="phone-input" placeholder="phone"></td>
-            <td><button id="add-button" disabled>Add to table</button></td>
+            <td><button id="add-button">Add to table</button></td>
           </tr>
         </table>
       </form>
@@ -48,16 +48,12 @@
       <button id="filter-button">Find</button>
     </div>
 
-    <div id="table-container">
-    </div>
+    <div id="table-container"></div>
+    <div id="pagination"></div>
+    <div id="selected-row"></div>
+    <div id="additionalInfo"></div>
 
-    <div id="pagination">
-    </div>
-
-    <div id="selected-row">
-    </div>
   </div>
-
   <script src="./table.js"></script>
 </body>
 </html>
